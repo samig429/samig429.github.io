@@ -3,42 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sami Ghimire | Survey</title>
+    <title>Sami Ghimire | Blind Books Survey</title>
 
     <link rel="icon" href="images/guineapig.png" type="image/png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
-
     <link rel="stylesheet" href="styles/default.css">
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
 <div data-include="components/header.html"></div>
 
-
 <main>
-    <h2>Survey</h2>
 
-<img src="images/placeholder.jpg" alt="Placeholder image">
+<h2>Shy Guinea Pig Blind Books Survey</h2>
 
+<section>
 
-<p>This page will contain the Survey certification project.</p>
+<h3>Reader Preferences</h3>
 
+<form>
+
+<label for="name">Name:</label>
+<input type="text" id="name" name="name">
+
+<br><br>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+
+<br><br>
+
+<label for="favorite">Favorite book genre:</label>
+
+<select id="favorite" name="favorite">
+    <option>Mystery</option>
+    <option>Fantasy</option>
+    <option>Romance</option>
+    <option>Science Fiction</option>
+</select>
+
+<br><br>
+
+<p>How often do you read?</p>
+
+<input type="radio" id="daily" name="reading">
+<label for="daily">Daily</label>
+
+<input type="radio" id="weekly" name="reading">
+<label for="weekly">Weekly</label>
+
+<input type="radio" id="monthly" name="reading">
+<label for="monthly">Monthly</label>
+
+<br><br>
+
+<label for="comments">Tell us about your perfect blind book:</label>
+
+<br>
+
+<textarea id="comments" name="comments" rows="5" cols="40"></textarea>
+
+<br><br>
+
+<button type="submit">Submit Survey</button>
+
+</form>
+
+</section>
 
 </main>
 
-
 <div data-include="components/footer.html"></div>
-
-
 
 <script src="scripts/HTMLInclude.min.js"></script>
 
 </body>
-
-
 </html>
