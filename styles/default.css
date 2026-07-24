@@ -5,10 +5,15 @@
 }
 
 body{
-    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
     background: linear-gradient(135deg, #ffe5ec, #dbeafe);
     color:#333;
     line-height:1.6;
+}
+
+h1,
+h2{
+    font-family: "Poppins", sans-serif;
 }
 
 header{
@@ -21,6 +26,10 @@ header{
 
 h1{
     font-size:3rem;
+}
+
+p{
+    margin-bottom:1rem;
 }
 
 header p{
@@ -47,8 +56,12 @@ nav a:hover{
     color:#3b82f6;
 }
 
+nav a:visited{
+    color:#0055ff;
+}
+
 main{
-    max-width:900px;
+    max-width:1000px;
     margin:40px auto;
     padding:0 20px;
 }
@@ -76,9 +89,9 @@ li{
 
 img{
     display:block;
+    max-width:100%;
+    height:auto;
     margin:20px auto;
-    width:180px;
-    border-radius:50%;
 }
 
 footer{
@@ -92,6 +105,11 @@ footer{
 footer a{
     color:white;
     font-weight:bold;
+    margin:0 .4rem;
+}
+
+footer a:visited{
+    color:white;
 }
 
 button,
