@@ -11,12 +11,8 @@ body{
     line-height:1.6;
 }
 
-h1,
-h2{
-    font-family: "Poppins", sans-serif;
-}
-
 header{
+    font-family: "Poppins", sans-serif;
     background:#2A4D64;
     color:#E1ABFD;
     text-align:center;
@@ -26,6 +22,7 @@ header{
 
 h1{
     font-size:3rem;
+    font-family: "Poppins", sans-serif;
 }
 
 p{
@@ -77,6 +74,7 @@ section{
 h2{
     color:#48A9A6;
     margin-bottom:15px;
+    font-family: "Poppins", sans-serif;
 }
 
 ul{
