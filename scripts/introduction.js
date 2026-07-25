@@ -155,3 +155,124 @@ document.querySelectorAll("#courses .course").forEach((course) => {        const
         <p><a href="introduction_form.html">Reset Form</a></p>
     `;
 });
+
+function getFormData() {
+
+    const courses = [];
+
+    document.querySelectorAll("#courses .course").forEach((course) => {
+        const inputs = course.querySelectorAll("input");
+
+        courses.push({
+            department: inputs[0].value,
+            number: inputs[1].value,
+            courseName: inputs[2].value,
+            reason: inputs[3].value
+        });
+    });
+
+    return {
+
+        firstName: document.getElementById("firstName").value,
+        middleName: document.getElementById("middleName").value,
+        preferredName: document.getElementById("preferredName").value,
+        lastName: document.getElementById("lastName").value,
+
+        mascotAdjective: document.getElementById("mascotAdjective").value,
+        mascotAnimal: document.getElementById("mascotAnimal").value,
+
+        pictureCaption: document.getElementById("pictureCaption").value,
+
+        personalStatement: document.getElementById("personalStatement").value,
+        professionalBackground: document.getElementById("professionalBackground").value,
+        academicBackground: document.getElementById("academicBackground").value,
+        subjectBackground: document.getElementById("subjectBackground").value,
+        platform: document.getElementById("platform").value,
+
+        funnyThing: document.getElementById("funnyThing").value,
+        share: document.getElementById("share").value,
+        quote: document.getElementById("quote").value,
+        quoteAuthor: document.getElementById("quoteAuthor").value,
+
+        courses: courses
+    };
+}
+
+function generateHTML() {
+
+    const data = getFormData();
+
+    let html = `
+<h2>${data.firstName} ${data.lastName}</h2>
+
+<h3>${data.mascotAdjective} ${data.mascotAnimal}</h3>
+
+<p><strong>Personal Statement:</strong> ${data.personalStatement}</p>
+
+<p><strong>Professional Background:</strong> ${data.professionalBackground}</p>
+
+<p><strong>Academic Background:</strong> ${data.academicBackground}</p>
+
+<p><strong>Background in this Subject:</strong> ${data.subjectBackground}</p>
+
+<p><strong>Platform:</strong> ${data.platform}</p>
+
+<p><strong>Favorite Quote:</strong> "${data.quote}" - ${data.quoteAuthor}</p>
+`;
+
+    document.getElementById("codeOutput").value = html;
+}
+
+function generateJSON() {
+
+    const data = getFormData();
+
+    document.getElementById("codeOutput").value =
+        JSON.stringify(data, null, 4);
+
+}
+
+function generateXML() {
+
+    const data = getFormData();
+
+    let xml = `<introduction>
+
+    <firstName>${data.firstName}</firstName>
+
+    <middleName>${data.middleName}</middleName>
+
+    <preferredName>${data.preferredName}</preferredName>
+
+    <lastName>${data.lastName}</lastName>
+
+    <mascot>
+        <adjective>${data.mascotAdjective}</adjective>
+        <animal>${data.mascotAnimal}</animal>
+    </mascot>
+
+    <pictureCaption>${data.pictureCaption}</pictureCaption>
+
+    <personalStatement>${data.personalStatement}</personalStatement>
+
+    <professionalBackground>${data.professionalBackground}</professionalBackground>
+
+    <academicBackground>${data.academicBackground}</academicBackground>
+
+    <subjectBackground>${data.subjectBackground}</subjectBackground>
+
+    <platform>${data.platform}</platform>
+
+    <funnyThing>${data.funnyThing}</funnyThing>
+
+    <share>${data.share}</share>
+
+    <quote author="${data.quoteAuthor}">
+        ${data.quote}
+    </quote>
+
+</introduction>`;
+
+    document.getElementById("codeOutput").value = xml;
+
+}
