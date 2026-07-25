@@ -257,13 +257,25 @@ I enjoy learning new technologies and solving programming problems.
     <button type="submit">Submit</button>
     <button type="reset">Reset</button>
     <button type="button" id="clearButton">Clear</button>
+    <button type="button" onclick="generateHTML()">Generate HTML</button>
+    <button type="button" onclick="generateJSON()">Generate JSON</button>
+    <button type="button" onclick="generateXML()">Generate XML</button>
+
 
 </form>
 
 <div id="output"></div>
 
+<h2>Generated Code</h2>
 
-<script src="scripts/HTMLInclude.min.js"></script>
+<textarea
+id="codeOutput"
+rows="25"
+cols="90"
+readonly>
+</textarea>
+
+
 <script src="scripts/introduction.js"></script>
 
 </main>
