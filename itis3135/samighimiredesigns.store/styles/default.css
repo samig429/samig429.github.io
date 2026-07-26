@@ -1,0 +1,73 @@
+/*
+White text is used for accessibility because it creates a contrast against the darker background
+*/
+
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #F6F4F0;
+    color: #333333;
+}
+
+header {
+    background-color: #6B9080;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    width: 120px;
+    display: block;
+    margin: 10px auto;
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+h1, h2,h3 {
+    font-family: 'Merriweather', Georgia, serif;
+    color: #355070;
+}
+
+
+ul {
+    list-style-type: square;
+}
+
+section {
+    background-color: #CCE3DE;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+a {
+    color: #355070;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #355070;
+}
+
+a:hover {
+    color: #6B9080;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #1D3557;
+}
+
+footer {
+    background-color: #355070;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
