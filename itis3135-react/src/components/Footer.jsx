@@ -1,0 +1,53 @@
+function Footer() {
+
+    return (
+        <footer>
+
+            <nav>
+                <a href="https://webpages.charlotte.edu/sghimire/">
+                    CLT Web
+                </a>
+                {" | "}
+
+                <a href="https://github.com/samig429">
+                    GitHub
+                </a>
+                {" | "}
+
+                <a href="https://www.freecodecamp.org/sghimire">
+                    freeCodeCamp
+                </a>
+                {" | "}
+
+                <a href="https://www.linkedin.com/in/samikshya-ghimire-a300291b6/">
+                    LinkedIn
+                </a>
+            </nav>
+
+
+            <p>
+                Designed by{" "}
+
+                <a href="https://samighimiredesigns.store/index.html">
+                    Sami Ghimire Designs
+                </a>
+
+                {" | 2026 | "}
+
+                <a
+                    href="https://www.freecodecamp.org/certification/sghimire/responsive-web-design-v9"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    Certified in Responsive Web Design
+                </a>
+
+            </p>
+
+        </footer>
+    );
+
+}
+
+
+export default Footer;
