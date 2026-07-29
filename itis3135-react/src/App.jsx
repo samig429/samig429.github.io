@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -8,40 +8,21 @@ import Introduction from "./pages/Introduction";
 import Contract from "./pages/Contract";
 import About from "./pages/About";
 
-
 function App() {
+  return (
+    <>
+      <Header />
 
-    return (
-        <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/introduction" element={<Introduction />} />
+        <Route path="/contract" element={<Contract />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
 
-            <Header />
-
-            <Routes>
-
-                <Route path="/" element={<Home />} />
-
-                <Route 
-                    path="/introduction" 
-                    element={<Introduction />} 
-                />
-
-                <Route 
-                    path="/contract" 
-                    element={<Contract />} 
-                />
-
-                <Route 
-                    path="/about" 
-                    element={<About />} 
-                />
-
-            </Routes>
-
-
-            <Footer />
-
-        </BrowserRouter>
-    );
+      <Footer />
+    </>
+  );
 }
 
 export default App;
